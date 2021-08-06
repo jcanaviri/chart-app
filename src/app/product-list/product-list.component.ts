@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
 
 import { Product, products } from '../products';
-import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +8,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = products;
+  products: Product[] = products;
 
   share() {
     window.alert('The product has been shared!');
